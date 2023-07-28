@@ -1,0 +1,15 @@
+.image-container{
+    & img{
+        object-fit: cover;
+    }
+    & .image-rounded{
+        border-radius: 4%;
+    }
+    & .image-circle{
+        border-radius: 50%;
+    }
+    & .image-rectangle{
+        height: 100px;
+        width: 200px;
+    }
+}

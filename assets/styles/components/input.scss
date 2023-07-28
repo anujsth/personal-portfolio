@@ -1,0 +1,115 @@
+.input-container {
+  display: flex;
+  z-index: 1;
+  position: relative;
+  flex-direction: column;
+  & .input-label {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  & .icon {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    z-index: 2;
+    object-fit: contain;
+    color: $primary-color;
+    font-size: 16px;
+  }
+
+  & .icon-start {
+    position: absolute;
+    left: 29px;
+    top: 7px;
+    z-index: 2;
+    object-fit: contain;
+    color: $primary-color;
+    font-size: 16px;
+  }
+
+
+  & .icon-end {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    z-index: 2;
+    object-fit: contain;
+    color: $primary-color;
+    font-size: 16px !important;
+  }
+
+
+  & .icon-password {
+    font-size: 16px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+  }
+  & .icon-label{
+    position:absolute;
+    top:22px;
+  }
+  & .input {
+    padding: 8px 12px;
+    outline: none;
+    font-size: 12px;
+    border: 1px solid $light-color;
+
+    &:focus {
+      border: 1px solid $primary-color !important ;
+    }
+    &.input--error {
+      border: 1px solid $danger-color;
+      color: $danger-color;
+      &:focus {
+        border: 1px solid $danger-color !important;
+      }
+    }
+    &.input-flushed {
+      border: none;
+      border-bottom: 1px solid $light-color;
+      &:focus {
+        border: none !important;
+        border-bottom: 1px solid $primary-color !important;
+      }
+    }
+    &.input-filled {
+      border: none;
+      background-color: $gray-color;
+      &:focus {
+        border: 1px solid  $primary-color !important;
+      }
+    }
+  }
+}
+
+.error--message {
+  margin-top: 4px;
+  padding-left: 16px;
+  color: $danger-color;
+  font-size: 12px;
+  position: relative;
+
+  & .error-icon {
+    position: absolute;
+    color: $danger-color;
+    font-size: 12px;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.pleft-35 {
+  padding-left: 32px !important;
+}
+
+.pright-32 {
+  padding-right: 32px !important;
+}
+
+input:disabled {
+  border: 1px solid $gray-color !important;
+}
+

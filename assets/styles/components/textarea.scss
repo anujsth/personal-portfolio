@@ -1,0 +1,72 @@
+@import "../variables/variable.scss";
+
+.TextArea {
+  border-radius: 4px;
+  color: $black-color;
+  padding: 7px 0px 7px 12px;
+
+  &.textarea-fullwidth {
+    height: auto;
+    width: 100%;
+  }
+
+  &.textarea-small {
+    padding: 7px 0px 7px 8px;
+    height: auto;
+  }
+  &.textarea-medium {
+    padding: 7px 0px 7px 14px;
+    height: auto;
+  }
+  &.textarea-large {
+    padding: 11px 0px 11px 16px;
+    height: auto;
+  }
+
+  &.textarea-primary {
+    border-color: $primary-color;
+
+    &.textarea-disabled {
+      opacity: 0.55;
+    }
+    &.textarea-primary:focus {
+      outline: none !important;
+      border-color: $primary-color;
+      box-shadow: 0 0 3px $primary-color;
+    }
+  }
+
+  &.textarea-secondary {
+    border-color: $secondary-color;
+
+    &.textarea-disabled {
+      opacity: 0.55;
+    }
+    &.textarea-secondary:focus {
+      outline: none !important;
+      border-color: $secondary-color;
+      box-shadow: 0 0 3px $secondary-color;
+    }
+  }
+  &.textarea-success {
+    border-color: $sucess-color;
+
+    &.textarea-disabled {
+      opacity: 0.55;
+    }
+    &.textarea-success:focus {
+      outline: none !important;
+      border-color: $sucess-color;
+      box-shadow: 0 0 3px $sucess-color;
+    }
+  }
+  &.textarea-error {
+    border-color: $danger-color;
+    color: $danger-color;
+    &.textarea-error:focus {
+      outline: none !important;
+      border-color: $danger-color;
+      box-shadow: 0 0 3px $danger-color;
+    }
+  }
+}

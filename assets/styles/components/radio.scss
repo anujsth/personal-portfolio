@@ -1,0 +1,98 @@
+@import "../variables/variable.scss";
+
+.radiogroup {
+  display: flex;
+  &.radiogroup-row {
+    flex-direction: row;
+  }
+  &.radiogroup-column {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+input[type="radio"] {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $primary-color;
+  border-radius: 50%;
+  background-clip: content-box;
+  padding: 3px;
+  cursor: pointer;
+}
+input[type="radio"]:checked {
+  background-color: $primary-color;
+}
+
+.radio-component {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  cursor: pointer;
+  color: $black-color;
+  padding-right: 30px;
+
+  .radio-label {
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  // .......color.....
+
+  &.radio--secondary {
+    input[type="radio"]:checked {
+      background-color: $secondary-color;
+    }
+    .radio-input {
+      border: 1px solid $secondary-color;
+    }
+  }
+
+  &.radio--danger {
+    input[type="radio"]:checked {
+      background-color: $danger-color;
+    }
+    .radio-input {
+      border: 1px solid $danger-color;
+    }
+
+    .radio-label {
+      color: $danger-color;
+    }
+  }
+  &.radio--disable {
+    color: #dddddd !important;
+    cursor: context-menu;
+
+    input[type="radio"]:checked {
+      background-color: #dddddd !important;
+    }
+
+    .radio-input {
+      border: 1px solid #dddddd;
+      cursor: context-menu;
+    }
+
+    .radio-label {
+      color: #dddddd;
+      cursor: context-menu;
+    }
+  }
+}
+
+.radio--error {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .radio-emsg {
+    color: #ff3333;
+    font-size: 13px;
+    margin-left: 6px;
+  }
+  .radio-emsg-disable {
+    color: #dddddd !important;
+  }
+}

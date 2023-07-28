@@ -1,0 +1,183 @@
+@import "../variables/variable.scss";
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+
+  .switch-label {
+    position: absolute;
+    top: 15px;
+    left: 59px;
+    color: #555;
+    font-size: 19px;
+  }
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #bbb;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+
+    &.sider-disable {
+      opacity: 0.4;
+      cursor: context-menu;
+    }
+
+    //..............size..........//
+    &.slider-small {
+      top: 24px;
+      left: 8px;
+      right: 25px;
+      bottom: 3px;
+    }
+    &.slider-medium {
+      top: 22.5px;
+      left: 6px;
+      right: 23px;
+      bottom: 3.25px;
+    }
+    &.slider-large {
+      top: 21.5px;
+      left: 3px;
+      right: 19px;
+      bottom: 2px;
+    }
+    //............................//
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    box-shadow: rgba(60, 64, 67, 0.75) 0px 2px 3px 0px,
+      rgba(60, 64, 67, 0.75) 0px 2px 6px 1px;
+  }
+  .sider-disable:before {
+    background-color: #eee;
+  }
+  //............circle size............//
+  .slider-small:before {
+    height: 14px;
+    width: 14px;
+    left: 0px;
+    bottom: -3px;
+  }
+  .slider-medium:before {
+    height: 16px;
+    width: 16px;
+    left: 0px;
+    bottom: -3.25px;
+  }
+  .slider-large:before {
+    height: 20px;
+    width: 20px;
+    left: 0px;
+    bottom: -4.25px;
+  }
+  //.....................//
+  input:checked + .slider {
+    background-color: $primary-color;
+    opacity: 0.75;
+    &.slider:before {
+      background-color: $primary-color;
+    }
+    &.slider-secondary {
+      background-color: $secondary-color;
+
+      &.slider:before {
+        background-color: $secondary-color;
+      }
+    }
+    &.slider-success {
+      background-color: $sucess-color;
+
+      &.slider:before {
+        background-color: $sucess-color;
+      }
+    }
+    &.slider-danger {
+      background-color: $danger-color;
+      &.slider:before {
+        background-color: $danger-color;
+      }
+    }
+    &.sider-disable {
+      opacity: 0.4;
+    }
+
+    //..............size.....//
+    &.slider-small {
+      top: 24px;
+      left: 8px;
+      right: 25px;
+      bottom: 3px;
+    }
+    &.slider-small:before {
+      height: 14px;
+      width: 14px;
+      left: -12px;
+      bottom: -3px;
+    }
+    &.slider-medium {
+      top: 22.5px;
+      left: 6px;
+      right: 31px;
+      bottom: 3.25px;
+    }
+    &.slider-medium:before {
+      height: 16px;
+      width: 16px;
+      left: -10px;
+      bottom: -3.45px;
+    }
+    &.slider-large {
+      top: 21.5px;
+      left: 3px;
+      right: 30px;
+      bottom: 2px;
+    }
+
+    &.slider-large:before {
+      height: 20px;
+      width: 20px;
+      left: -9px;
+      bottom: -4.25px;
+    }
+  }
+  input:focus + .slider {
+    box-shadow: 0 0 1px $primary-color;
+    &.slider-secondary {
+      box-shadow: 0 0 1px $secondary-color;
+    }
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translate(26px);
+    -ms-transform: translate(26px);
+    transform: translateX(26px);
+
+    &.slider-small {
+      top: 24px;
+      left: 8px;
+      right: 17px;
+      bottom: 1px;
+    }
+  }
+
+  // ....size.....
+
+  .round {
+    border-radius: 34px;
+  }
+  .round:before {
+    border-radius: 50%;
+  }
+}
